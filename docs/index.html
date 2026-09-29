@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magic Fencer · L-Stylized · Three.js Character Bench</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <h1>Silver Twin-tail Magic Fencer</h1>
+      <span class="badge" id="variant-badge">L · Stylized</span>
+    </div>
+    <p class="sub">Procedural Three.js character · toon shading · inverted-hull outline · baked secondary motion</p>
+  </header>
+
+  <main class="layout">
+    <section class="viewport" aria-label="3D preview">
+      <canvas id="three-canvas" aria-label="Animated 3D character preview"></canvas>
+      <div class="hud" id="hud" aria-live="polite">Loading…</div>
+      <div class="loading" id="loading">Building character &amp; baking animation…</div>
+      <p class="hint">Drag to orbit · wheel to zoom</p>
+    </section>
+
+    <aside class="panel">
+      <section class="group" aria-labelledby="anim-h">
+        <h2 id="anim-h">Animation</h2>
+        <div id="animation-controls" class="btns" role="group" aria-label="Animation clips">
+          <button type="button" data-animation="Idle">Idle</button>
+          <button type="button" data-animation="Run">Run</button>
+          <button type="button" data-animation="Attack_A">Attack A</button>
+          <button type="button" data-animation="Attack_B">Attack B</button>
+          <button type="button" id="autoplay-btn" class="wide" aria-pressed="false">Auto Play (Idle → Run → A → B)</button>
+        </div>
+        <label class="speed">Speed
+          <input type="range" id="speed" min="0.1" max="1.5" step="0.05" value="1" aria-label="Playback speed">
+          <output id="speed-out">1.00×</output>
+        </label>
+      </section>
+
+      <section class="group" aria-labelledby="view-h">
+        <h2 id="view-h">View</h2>
+        <div id="view-controls" class="btns" role="group" aria-label="Camera presets">
+          <button type="button" data-view="front">Front</button>
+          <button type="button" data-view="3/4">3/4</button>
+          <button type="button" data-view="side">Side</button>
+          <button type="button" data-view="back">Back</button>
+          <button type="button" id="turntable-btn" class="wide" aria-pressed="false">Turntable</button>
+          <button type="button" id="reset-btn" class="wide">Reset View</button>
+        </div>
+      </section>
+
+      <section class="group" aria-labelledby="meta-h">
+        <h2 id="meta-h">Runtime metadata</h2>
+        <dl id="metadata-panel" class="meta"></dl>
+      </section>
+    </aside>
+  </main>
+
+  <section class="sheet" aria-labelledby="sheet-h">
+    <h2 id="sheet-h">Contact Sheet</h2>
+    <p class="sub">Key poses rendered from the same 3/4 camera. Click a thumbnail to hold that pose in the preview.</p>
+    <div id="contact-sheet"></div>
+  </section>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

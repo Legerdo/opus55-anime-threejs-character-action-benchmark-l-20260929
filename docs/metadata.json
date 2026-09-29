@@ -1,0 +1,29 @@
+{
+  "variant": "L-Stylized",
+  "targetBodyRatio": "4.5-5.5 heads (stylized anime, long limbs)",
+  "threeVersion": "0.186.1",
+  "threeRevision": "186",
+  "measuredHeight": 1.5909,
+  "measuredHeadsTall": 5.24,
+  "triangleCount": 158813,
+  "triangleCountExcludingOutlines": 86591,
+  "meshCount": 147,
+  "skinnedMeshCount": 12,
+  "outlineMeshCount": 46,
+  "materialCount": 38,
+  "nodeCount": 215,
+  "animationNames": [
+    "Idle",
+    "Run",
+    "Attack_A",
+    "Attack_B"
+  ],
+  "animationDurations": {
+    "Idle": 2,
+    "Run": 0.7,
+    "Attack_A": 0.85,
+    "Attack_B": 1.1
+  },
+  "measurement": "runtime scene-graph traversal of characterRoot at Idle t=0 (Box3 over world-space vertices; triangles = index.count/3 or position.count/3, outline hull meshes included)",
+  "generatedBy": "tools/verify.mjs (headless Chromium via Playwright)"
+}
